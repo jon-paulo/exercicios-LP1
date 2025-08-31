@@ -1,0 +1,25 @@
+Respostas das perguntas
+
+1.
+a) tipos de dados são usados para categorizar dados, para o que ele seria utilizado e espaço de armazenamento necesário.
+b) são importantes para determinar como utilizar cada dado, quanta memória precisa ocupar, quais tipos de operações podem ser feitas, etc.
+
+2.
+a) imagino que não compila porque ele reconhece o sinal de "-" como para uma operação de subtração e ele não deixaria um int subtrair um char.
+b) um int e um char.
+
+c) error: invalid operands to binary - (have 'int' and 'char *')
+      3 |   print("Soma = %d\n", 100 - "10");
+  dá erro porque usa dois tipos diferentes de dados que não fazem sentido para essa operação
+
+4.
+a) na tipagem estática é preciso declarar o tipo de variável no código, então o computador pode verifcar os tipos de variável antes de rodar. Na tipagem dinâmica não precisa declarar, e o computador precisa rodar e checar os valores das variáveis e as compatibilidades para determinar os tipos sozinho.
+b) estática: java, C, C++, C#. Dinâmica: Java Script, Python
+c) enquanto que na tipagem estática os tipos de dados são verificados apenas na hora de compilar, o que permite várias otimizações, como alocar o tamanho de memória exato e não como o tipo é fixo, não precisa verificar várias vezes qual o tipo de dado sendo usado. Na dinâmica os tipos são verifados na execução, sendo necessária mais operações diversas vezes.
+Então por exemplo nesse loop de Python:
+  soma = 0
+  for i in range(1000000):
+      soma += i
+  print(f"Soma: {soma}")
+A cada loop Python vai verificar o tipo da variável soma, o tipo de 'i', verificar se '+' funciona pra essas variáveis, somar, e atribuir os valores. ele vai fazer isso 1000000 vezes(apesar de novas versões do Python recentemente terem dado uma otimizada nesses cenários de checagem desnecessária em loops, ainda é menos eficiente que C).
+Se fosse um equivalente desse código em C, a checagem seria feita em compilação, e evitaria essas verificações em cada loop. ele só faria a soma e atribuição.
