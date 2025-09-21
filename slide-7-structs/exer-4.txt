@@ -1,0 +1,11 @@
+1. Explique com suas próprias palavras as diferentes abordagens dos exercícios 2 e 3.
+  No exercicio 2 eu criei um personagem novo temporário na função, retornei ele e copiei pros personagens que eu printei
+  No exercicio 3 eu passei o personagem que eu vou printar como referencia para a função, então ela só mudou os valores sem criar e retornar um outro personagem.
+
+2. Qual abordagem você prefere usar e porquê?
+  Eu prefiro o método do exercicio 3, já que é mais eficiente e eu gostei de como ficou mais pequeno e bonitinho o código, sem return ou criar variaveis ou structs, só ponteiro, printf e scanf.
+
+3. Na sua opinião quais são as diferenças de uso de memória e velocidade nas duas abordagens?
+  A diferença de velocidade não parece tão grande pra um struct tão pequeno, mas precisa de mais memória e processamento pra criar uma cópia do personagem
+  Pra um struct com mais variáveis, criar uma cópia toda vez que for preencher parece bem ineficiente, ainda mais que a alternativa é usar ponteiros, que ocupam bem pouco espaço, e um valor fixo. 
+  Um struct onde tem várias variáveis strings ou listas enormes por exemplo, seria bem ineficiente copiar tudo toda vez que for criar mais um. 
