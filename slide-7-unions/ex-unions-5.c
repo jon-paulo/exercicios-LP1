@@ -79,9 +79,10 @@ int main(){
 	Foca.tipo = Mamifero;
 	Foca.Mamifero.dentes = 34;
 	Foca.Mamifero.velo_terrestre = 2;
-	Foca.Mamifero.vol_cerebro = 8411;
+	Foca.Mamifero.vol_cerebro = 271;
 	
 	
 	printf("%d %d %.2f %.2f", Elefante.tipo = Mamifero, Elefante.Mamifero.dentes, Elefante.Mamifero.velo_terrestre, Elefante.Mamifero.vol_cerebro);
 	printf("Autonomia Aquatica de um Dragao de Komodo: %s", Komodo.Reptil.autono_agua);
+
 }
