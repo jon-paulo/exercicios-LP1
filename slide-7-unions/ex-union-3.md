@@ -1,0 +1,3 @@
+Union discriminada é quando tem uma tag em uma union dizendo qual dos membros está sendo usado praquela variável espefíca. Sem isso a informação sobre qual membro ta sendo utilizado fica só na mão do programador, ou escrito no código.
+Com a tag o próprio programa guarda a informação, em C puro não tem exatamente uma tag na Union, então a gente usa uma struct com uma "tag"(geralmente uma enum ou sla), e a union.
+Então na hora de inicializar ou preencher uma union, você dá a tag, e essa tag pode ser usada para varias coisas como switch's ou if's por exemplo, se voce escolhe uma opção B, o código sabe e printa ou preenche de acordo.
