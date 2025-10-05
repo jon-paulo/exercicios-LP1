@@ -58,10 +58,10 @@ float determinante (int arr[L][C], int lc){
 int main(void){
 	int arr[L][C];
 	int lc = L;
-	int cont = 1;
 	for(int i = 0; i < L; i++){
 		for(int j = 0; j < C; j++){
-			arr[i][j] = cont++;
+			printf("arr[%d][%d]:", i, j);
+			scanf("%d", &arr[i][j]);
 		}
 	}
 	for(int i = 0; i < L; i++){
@@ -72,4 +72,5 @@ int main(void){
 	}
 	printf("\n");
 	printf("%.2f", determinante (arr, lc));
+
 }
