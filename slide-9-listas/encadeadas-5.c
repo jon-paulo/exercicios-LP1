@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
+// parei com hardcode porque dar free() em uma variavel que nao foi criada usando malloc da comportamento indefinido
 
 struct Caixa{
     int valor;
@@ -17,8 +19,11 @@ void exibe (struct Caixa* caixa){
 }
 
 struct Caixa* remover(struct Caixa* lista, int valor){
+	struct Caixa* Exclusao;
 	while (lista != NULL && lista->valor == valor){ // se o valor tiver no comeco
-        lista = lista->prox; 
+        Exclusao = lista->prox;
+		lista = lista->prox;
+		free(Exclusao); 
 	}
 	if (lista == NULL) return NULL; // caso soh tinha o valor na lista
 	
@@ -26,7 +31,9 @@ struct Caixa* remover(struct Caixa* lista, int valor){
 	
 	while (lista->prox != NULL) {
         if (lista->prox->valor == valor){
-        	lista->prox = lista->prox->prox;
+        	Exclusao = lista->prox;
+			lista->prox = lista->prox->prox;
+        	free(Exclusao);
         } else { // se o atual->prox nao for o mesmo valor
         	lista = lista->prox;
         }
@@ -34,21 +41,7 @@ struct Caixa* remover(struct Caixa* lista, int valor){
 	return cabeca;
 }
 
-int main(){ // soh pra eu testar
+int main(){
 
-struct Caixa c5 = {5, NULL};
-struct Caixa c4 = {7, &c5};
-struct Caixa c3 = {9, &c4};
-struct Caixa c2 = {3, &c3};
-struct Caixa c1 = {1, &c2};
-
-struct Caixa* cabeca = &c1;
-exibe(cabeca); // mostrando a lista normal com 9
-cabeca = remover(cabeca, 9); // removendo 9
-exibe(cabeca); // exibindo sem 9
-cabeca = &c3; // botando 9 no inicio da lista
-c3.prox = &c1;
-exibe(cabeca); // mostrando 9 no inicio
-cabeca = remover(cabeca, 9); // tira 9 do inicio
-exibe(cabeca); // mostra
+ return 0;
 }
