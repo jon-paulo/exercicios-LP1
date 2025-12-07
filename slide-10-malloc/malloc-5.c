@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 // parei com hardcode porque dar free() em uma variavel que nao foi criada usando malloc da comportamento indefinido
 
 struct Caixa{
